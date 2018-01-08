@@ -399,7 +399,7 @@ class Visdom(object):
         img = np.transpose(img, (1, 2, 0))
         im = Image.fromarray(img)
         buf = BytesIO()
-        im.save(buf, format='JPEG', quality=opts['jpgquality'])
+        im.save(buf, format='PNG')
         b64encoded = b64.b64encode(buf.getvalue()).decode('utf-8')
 
         data = [{
